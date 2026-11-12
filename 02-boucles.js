@@ -82,7 +82,16 @@ produit(0);
  */
 export const compterPairs = (n) => {
   // à compléter
+  let add = 0;
+  for (let index = 1; index <= n ; index++) {
+    if(index % 2 === 0){
+      add++;
+    }  
+  }
+  return add;
 }
+compterPairs(10);
+compterPairs(7);
 
 /**
  * Retourne un tableau contenant les n premiers multiples de n.
@@ -102,12 +111,12 @@ export const table = (n) => {
       }
       number[i] = n*f;
       f++;
-      console.log("tab[i]:" + number[i]);
+      console.log("number:" + number[i]);
   }
   
-  // console.log(tab[i])
-  console.log("tab:" + tab);
-  return tab;
+  
+  console.log("number:" + number);
+  return number;
 }
 table(3);
 table(0);
