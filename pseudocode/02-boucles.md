@@ -10,6 +10,7 @@ VARIABLE
     n: ENTIER
 DEBUT
     AFFICHER "Entrez un entier n :"
+
     LIRE n
     POUR i <-- 1 <= n
         SI i % 2 === 0 ALORS
@@ -55,18 +56,18 @@ FUNCTION TABLE
 VARIABLE
  n: ENTIER
  i: ENTIER
- tab:
+ number: []
 DEBUT
     AFFICHER "Entrez un entier n :"
     LIRE n
-    POUR i ← 1 à n
-        tab = []
-        tab[i]= n * i
+    POUR i ← 0 à n
+        number = []
+        number[i]= n * f
         SI n=0 ALORS
-            tab = []
+            number = []
         FIN SI
     FIN POUR
-        RETOURNER tab
+        RETOURNER number
 FIN
 
 
