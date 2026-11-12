@@ -70,5 +70,23 @@ DEBUT
         RETOURNER number
 FIN
 
+FUNCTION COMPTER PAIR
+VARIABLES
+n:ENTIER
+add:ENTIER
+DEBUT
+    AFFICHER "Donnez moi un nombre"
+    LIRE n
+    add = 0
+    
+    POUR i ← 1 à n
+        SI index % 2 ALORS
+            add = add + 1
+        FIN SI
+        RETOURNER add
+    FIN POUR
+FIN
+    
+
 
     
