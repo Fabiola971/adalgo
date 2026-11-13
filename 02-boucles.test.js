@@ -83,6 +83,12 @@ describe("table", () => {
 // Cas à couvrir : multiplesJusqua(3, 12) → [3, 6, 9, 12], multiplesJusqua(7, 20) → [7, 14].
 describe("multiplesJusqua", () => {
   // à compléter
+  it("retourne la table de multiplication de n=3 jusqu'a obtenir limite <= 12", () =>{
+    expect(multiplesJusqua(3, 12)).toEqual([3, 6, 9, 12])
+  })
+  it("retourne la table de multiplication de n=7 jusqu'a obtenir limite <= 20", () =>{
+    expect(multiplesJusqua(7, 20)).toEqual([7, 14])
+  })
 })
 
 // [FACULTATIF] Même pattern que somme/produit — à toi.
