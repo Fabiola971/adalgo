@@ -83,9 +83,28 @@ DEBUT
         SI index % 2 ALORS
             add = add + 1
         FIN SI
-        RETOURNER add
     FIN POUR
+        RETOURNER add
 FIN
+
+MULTIPLIER JUSQU'A
+VARIABLES
+ n:ENTIER
+ limite: ENTIER
+ tab:[]
+DEBUT
+    AFFICHER "Donnez moi un nombre"
+    LIRE n
+    AFFICHER "Donnez moi un nombre"
+    LIRE limite
+    
+    POUR i ← 0 à limite
+        tab[i] = n * i+1
+    FIN POUR
+        RETOURNER tab
+FIN
+
+
     
 
 
