@@ -131,7 +131,17 @@ table(0);
  */
 export const multiplesJusqua = (n, limite) => {
   // à compléter
+  let tab = [];
+  
+  for(let i=0; n * (i + 1) <= limite; i++){
+    tab[i]= n * (i + 1);  
+  }
+
+  console.log (`tab: ${tab}`)
+  return tab
 }
+multiplesJusqua(3, 12);
+multiplesJusqua(7, 20);
 
 /**
  * [FACULTATIF]
