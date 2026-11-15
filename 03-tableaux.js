@@ -10,7 +10,17 @@
  */
 export const maximum = (tableau) => {
   // à compléter
+  let max = tableau[0];
+  for(let i = 1; i <= tableau.length; i++){
+   
+    if(tableau[i] > max){
+      max = tableau[i];
+    }
+  }
+  console.log(`max: ${max}`)
+  return max;
 }
+maximum([3, 7, 2, 9, 1]);
 
 /**
  * Retourne la plus petite valeur d'un tableau de nombres. Sans Math.min().
@@ -20,8 +30,17 @@ export const maximum = (tableau) => {
  */
 export const minimum = (tableau) => {
   // à compléter
+  let min = tableau[0];
+  for(let i = 1; i <= tableau.length; i++){
+    
+    if(tableau[i] < min){
+      min = tableau[i];
+    }
+  }
+  console.log(`min: ${min}`)
+  return min;
 }
-
+minimum([3, 7, 2, 9, 1]);
 /**
  * Retourne la moyenne des valeurs. Retourne null si le tableau est vide.
  * @param {number[]} tableau
