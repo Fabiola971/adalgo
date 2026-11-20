@@ -19,8 +19,16 @@ describe("maximum", () => {
 // Cas à couvrir : cas normal, négatifs.
 describe("minimum", () => {
   // à compléter
+  it("retourne le minimum", () => {
+    expect(minimum([3, 7, 2, 9, 1])).toBe(1)
+  })
+  it("fonctionne avec un seul élément", () => {
+    expect(minimum([2])).toBe(2)
+  })
+  it("fonctionne avec des négatifs", () => {
+    expect(minimum([-3, -1, -7])).toBe(-7)
+  })
 })
-
 // Nouveau cas : retourner null. On te montre moyenne en entier.
 describe("moyenne", () => {
   it("retourne la moyenne", () => {
@@ -38,12 +46,33 @@ describe("moyenne", () => {
 // Cas à couvrir : valeur présente, valeur absente, tableau vide.
 describe("contient", () => {
   // à compléter
+  it("retourne true si un élément du tableau = valeur", () => {
+    expect(contient([1, 2, 3], 2)).toEqual(true)
+  })
+  it("retourne null pour un tableau vide", () => {
+    expect(contient([])).toEqual(null)
+  })
+  it("retourne false si aucun élément du tableau = valeur", () => {
+    expect(contient([1, 2, 3], 4)).toEqual(false)
+  })
 })
 
 // Même pattern — à toi.
 // Cas à couvrir : plusieurs occurrences, valeur absente (retourne 0).
 describe("compter", () => {
   // à compléter
+  it("retourne le nombre de fois ou la valeur = 2 apparait dans le tableau", () => {
+    expect(compter([1, 2, 2, 3, 2], 2)).toEqual(3)
+  })
+  it("retourne 0 si la valeur est absente", () => {
+    expect(compter([1, 2, 2, 3, 2],)).toEqual(0)
+  })
+  it("fonctionne avec un seul élément", () => {
+    expect(compter([10], 10)).toEqual(1)
+  })
+  it("retourne null si le tableau est vide", () => {
+    expect(compter([], 5)).toEqual(null)
+  })
 })
 
 // [FACULTATIF] Nouveau cas : vérifier que le tableau original n'est pas modifié.

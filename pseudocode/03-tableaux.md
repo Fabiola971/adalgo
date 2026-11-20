@@ -26,3 +26,14 @@ DEBUT
         RETOURNER min
 FIN
 
+INVERSER
+VARIABLE
+    tableau: []
+    verse: []
+DEBUT
+    verse[]
+    POUR i ← tableau.length à 0
+        verse.push(tableau[i])
+    FIN POUR
+        RETOURNER verse
+FIN

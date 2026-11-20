@@ -12,7 +12,6 @@ export const maximum = (tableau) => {
   // à compléter
   let max = tableau[0];
   for(let i = 1; i <= tableau.length; i++){
-   
     if(tableau[i] > max){
       max = tableau[i];
     }
@@ -32,7 +31,6 @@ export const minimum = (tableau) => {
   // à compléter
   let min = tableau[0];
   for(let i = 1; i <= tableau.length; i++){
-    
     if(tableau[i] < min){
       min = tableau[i];
     }
@@ -49,7 +47,15 @@ minimum([3, 7, 2, 9, 1]);
  */
 export const moyenne = (tableau) => {
   // à compléter
+  let add = 0;
+  tableau.forEach( (t) =>{
+    add = add + t; 
+  })
+  console.log(`moyenne: ${add/tableau.length}`)
+  return add/tableau.length;
 }
+moyenne([2, 4, 6]);
+moyenne([]);
 
 /**
  * Retourne true si la valeur est présente dans le tableau, false sinon.
@@ -61,7 +67,17 @@ export const moyenne = (tableau) => {
  */
 export const contient = (tableau, valeur) => {
   // à compléter
+  for(let i=0; i< tableau.length; i++){
+     if (tableau[i] === valeur){
+        console.log(tableau[i]);
+        return true
+     } 
+  }
+  console.log(`tabContient: ${tableau.length}`)
 }
+contient([1, 2, 3], 2);
+contient([1, 2, 3], 5);
+contient([])
 
 /**
  * Retourne le nombre de fois que la valeur apparaît dans le tableau.
@@ -72,7 +88,18 @@ export const contient = (tableau, valeur) => {
  */
 export const compter = (tableau, valeur) => {
   // à compléter
+  let nbre = 0;
+  tableau.forEach(t => {
+    if(t === valeur){
+      nbre++;
+    }   
+  });
+  console.log(`compternbre [${tableau}]: ${nbre}`)
+  return nbre 
 }
+compter([1, 2, 2, 3, 2], 2)
+compter([1, 2, 2, 3, 2], )
+console.log(compter([], 2))
 
 /**
  * [FACULTATIF]
@@ -84,8 +111,19 @@ export const compter = (tableau, valeur) => {
  */
 export const inverser = (tableau) => {
   // à compléter
+  // let verse = [];
+  let j = 0;
+  for (let index = tableau.length; index >= 0; index--) {
+    let verse = []
+    verse.push(tableau[index]);
+    verse = verse.slice(1)
+    j++ 
+    console.log(`verse: ${verse}`)
+    return verse;
+  }
+  
 }
-
+inverser([1, 2, 3])
 /**
  * [FACULTATIF]
  * Retourne un nouveau tableau sans les doublons, dans l'ordre d'apparition.
