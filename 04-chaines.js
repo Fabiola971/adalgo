@@ -10,7 +10,11 @@
  */
 export const inverserChaine = (chaine) => {
   // à compléter
+  chaine = chaine.split("").reverse().join("");
+  console.log(`inverserChaine: ${chaine}`);
+  return chaine;
 }
+inverserChaine("bonjour");
 
 /**
  * Retourne true si la chaîne se lit de la même façon dans les deux sens.
@@ -20,7 +24,16 @@ export const inverserChaine = (chaine) => {
  */
 export const estPalindrome = (chaine) => {
   // à compléter
+  let palind = chaine.split("").reverse().join("");
+  if(chaine === palind){
+    return true;
+
+  }else{
+    return false;
+  } 
 }
+console.log(estPalindrome("kayak"));
+console.log(estPalindrome("bonjour"));
 
 /**
  * Retourne le nombre de voyelles dans la chaîne (a, e, i, o, u, y).
@@ -30,8 +43,19 @@ export const estPalindrome = (chaine) => {
  */
 export const compterVoyelles = (chaine) => {
   // à compléter
+  let voyelles ="aeiouy";
+  let j = 0;
+  for (let index = 0; index < chaine.length; index++) {
+    if(voyelles.includes(chaine[index])){
+      j++;
+    }
+  }
+  console.log(`j:${j}`)
+  return j  
 }
-
+compterVoyelles("bonjour");
+compterVoyelles("t")
+console.log(compterVoyelles(""))
 /**
  * [FACULTATIF]
  * Met la première lettre en majuscule et le reste en minuscule.
